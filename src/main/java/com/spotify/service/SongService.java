@@ -22,4 +22,8 @@ public class SongService {
 	public List<Song> getByKey(String value) {
 		return repo.findByNameOrArtists(value);
 	}
+	
+	public Song getSong(String id) {
+		return repo.findById(id).get();
+	}
 }

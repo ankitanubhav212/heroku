@@ -26,4 +26,10 @@ public class SpotifyController {
 	    List<Song> getSongs(@PathParam("name") String name) {
 	        return service.getByKey(name);
 	    }
+
+	 @RequestMapping("/song")
+	  Song getSong(@PathParam("id") String id) {
+		 return service.getSong(id);
+	 }
+
 }
